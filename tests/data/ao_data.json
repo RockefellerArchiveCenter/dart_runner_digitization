@@ -1,0 +1,477 @@
+{
+    "lock_version": 5,
+    "position": 3502,
+    "publish": true,
+    "ref_id": "03af8527afab4548ba1cb1331e76b0bc",
+    "title": "Reception - Opening Labor College - New York",
+    "display_string": "Reception - Opening Labor College - New York, August 8, 1971",
+    "restrictions_apply": false,
+    "created_by": "admin",
+    "last_modified_by": "k.martin",
+    "create_time": "2014-12-06T10:05:44Z",
+    "system_mtime": "2021-01-10T02:12:32Z",
+    "user_mtime": "2021-01-10T02:12:32Z",
+    "suppressed": false,
+    "is_slug_auto": false,
+    "level": "file",
+    "jsonmodel_type": "archival_object",
+    "external_ids": [
+        {
+            "external_id": "1191408",
+            "source": "Archivists Toolkit Database::RESOURCE_COMPONENT",
+            "created_by": "k.martin",
+            "last_modified_by": "k.martin",
+            "create_time": "2021-01-10T02:12:32Z",
+            "system_mtime": "2021-01-10T02:12:32Z",
+            "user_mtime": "2021-01-10T02:12:32Z",
+            "jsonmodel_type": "external_id"
+        }
+    ],
+    "subjects": [
+
+    ],
+    "linked_events": [
+
+    ],
+    "extents": [
+
+    ],
+    "lang_materials": [
+
+    ],
+    "dates": [
+        {
+            "lock_version": 0,
+            "expression": "August 8, 1971",
+            "begin": "1971",
+            "end": "1971",
+            "created_by": "k.martin",
+            "last_modified_by": "k.martin",
+            "create_time": "2021-01-10T02:12:32Z",
+            "system_mtime": "2021-01-10T02:12:32Z",
+            "user_mtime": "2021-01-10T02:12:32Z",
+            "date_type": "inclusive",
+            "label": "creation",
+            "jsonmodel_type": "date"
+        }
+    ],
+    "external_documents": [
+
+    ],
+    "rights_statements": [
+
+    ],
+    "linked_agents": [
+
+    ],
+    "ancestors": [
+        {
+            "ref": "/repositories/2/resources/571",
+            "level": "series",
+            "_resolved": {
+                "lock_version": 13,
+                "title": "Nelson A. Rockefeller gubernatorial records, Speeches, Series 33",
+                "publish": true,
+                "restrictions": false,
+                "ead_id": "FA372.xml",
+                "finding_aid_title": "A Guide to the Nelson A. Rockefeller Gubernatorial records, Speeches, Series 33\\n",
+                "finding_aid_filing_title": "Rockefeller (Nelson A.) Gubernatorial records, Speeches, Series 33",
+                "finding_aid_date": "2003",
+                "created_by": "admin",
+                "last_modified_by": "k.martin",
+                "create_time": "2014-12-06T10:02:44Z",
+                "system_mtime": "2021-03-29T15:58:12Z",
+                "user_mtime": "2020-12-15T21:33:26Z",
+                "suppressed": false,
+                "is_slug_auto": false,
+                "id_0": "FA372",
+                "level": "series",
+                "finding_aid_language": "eng",
+                "finding_aid_script": "Latn",
+                "finding_aid_status": "under_revision",
+                "jsonmodel_type": "resource",
+                "external_ids": [
+                    {
+                        "external_id": "2190",
+                        "source": "Archivists Toolkit Database::RESOURCE",
+                        "created_by": "k.martin",
+                        "last_modified_by": "k.martin",
+                        "create_time": "2020-12-15T21:33:38Z",
+                        "system_mtime": "2020-12-15T21:33:38Z",
+                        "user_mtime": "2020-12-15T21:33:38Z",
+                        "jsonmodel_type": "external_id"
+                    }
+                ],
+                "subjects": [
+                    {
+                        "ref": "/subjects/573"
+                    },
+                    {
+                        "ref": "/subjects/580"
+                    },
+                    {
+                        "ref": "/subjects/578"
+                    },
+                    {
+                        "ref": "/subjects/9"
+                    },
+                    {
+                        "ref": "/subjects/139"
+                    },
+                    {
+                        "ref": "/subjects/544"
+                    },
+                    {
+                        "ref": "/subjects/577"
+                    },
+                    {
+                        "ref": "/subjects/537"
+                    },
+                    {
+                        "ref": "/subjects/26"
+                    },
+                    {
+                        "ref": "/subjects/574"
+                    },
+                    {
+                        "ref": "/subjects/36"
+                    },
+                    {
+                        "ref": "/subjects/294"
+                    },
+                    {
+                        "ref": "/subjects/539"
+                    },
+                    {
+                        "ref": "/subjects/241"
+                    },
+                    {
+                        "ref": "/subjects/362"
+                    },
+                    {
+                        "ref": "/subjects/260"
+                    },
+                    {
+                        "ref": "/subjects/572"
+                    },
+                    {
+                        "ref": "/subjects/37"
+                    },
+                    {
+                        "ref": "/subjects/329"
+                    },
+                    {
+                        "ref": "/subjects/365"
+                    },
+                    {
+                        "ref": "/subjects/27"
+                    },
+                    {
+                        "ref": "/subjects/538"
+                    },
+                    {
+                        "ref": "/subjects/548"
+                    },
+                    {
+                        "ref": "/subjects/547"
+                    },
+                    {
+                        "ref": "/subjects/546"
+                    },
+                    {
+                        "ref": "/subjects/193"
+                    },
+                    {
+                        "ref": "/subjects/330"
+                    },
+                    {
+                        "ref": "/subjects/102"
+                    },
+                    {
+                        "ref": "/subjects/576"
+                    },
+                    {
+                        "ref": "/subjects/575"
+                    },
+                    {
+                        "ref": "/subjects/579"
+                    }
+                ],
+                "linked_events": [
+
+                ],
+                "extents": [
+                    {
+                        "lock_version": 0,
+                        "number": "128.38",
+                        "container_summary": "98 standard record storage boxes.",
+                        "created_by": "k.martin",
+                        "last_modified_by": "k.martin",
+                        "create_time": "2020-12-15T21:33:38Z",
+                        "system_mtime": "2020-12-15T21:33:38Z",
+                        "user_mtime": "2020-12-15T21:33:38Z",
+                        "portion": "whole",
+                        "extent_type": "Cubic Feet",
+                        "jsonmodel_type": "extent"
+                    }
+                ],
+                "lang_materials": [
+                    {
+                        "lock_version": 0,
+                        "created_by": "k.martin",
+                        "last_modified_by": "k.martin",
+                        "create_time": "2020-12-15T21:33:38Z",
+                        "system_mtime": "2020-12-15T21:33:38Z",
+                        "user_mtime": "2020-12-15T21:33:38Z",
+                        "jsonmodel_type": "lang_material",
+                        "notes": [
+
+                        ],
+                        "language_and_script": {
+                            "lock_version": 0,
+                            "created_by": "k.martin",
+                            "last_modified_by": "k.martin",
+                            "create_time": "2020-12-15T21:33:38Z",
+                            "system_mtime": "2020-12-15T21:33:38Z",
+                            "user_mtime": "2020-12-15T21:33:38Z",
+                            "language": "eng",
+                            "jsonmodel_type": "language_and_script"
+                        }
+                    }
+                ],
+                "dates": [
+                    {
+                        "lock_version": 0,
+                        "expression": "1958-1973",
+                        "begin": "1958",
+                        "end": "1973",
+                        "created_by": "k.martin",
+                        "last_modified_by": "k.martin",
+                        "create_time": "2020-12-15T21:33:38Z",
+                        "system_mtime": "2020-12-15T21:33:38Z",
+                        "user_mtime": "2020-12-15T21:33:38Z",
+                        "date_type": "inclusive",
+                        "label": "creation",
+                        "jsonmodel_type": "date"
+                    }
+                ],
+                "external_documents": [
+
+                ],
+                "rights_statements": [
+
+                ],
+                "linked_agents": [
+                    {
+                        "role": "creator",
+                        "relator": "aut",
+                        "terms": [
+
+                        ],
+                        "ref": "/agents/people/147"
+                    },
+                    {
+                        "role": "creator",
+                        "relator": "ctb",
+                        "terms": [
+
+                        ],
+                        "ref": "/agents/corporate_entities/1843"
+                    },
+                    {
+                        "role": "creator",
+                        "relator": "ctb",
+                        "terms": [
+
+                        ],
+                        "ref": "/agents/people/526"
+                    }
+                ],
+                "revision_statements": [
+                    {
+                        "date": "finding aid revision date not supplied",
+                        "description": "<date>30 June 2010</date><item>Migrated from Re:discovery to the Archivists Toolkit by Becky Robbins.</item>",
+                        "created_by": "k.martin",
+                        "last_modified_by": "k.martin",
+                        "create_time": "2020-12-15T21:33:38Z",
+                        "system_mtime": "2020-12-15T21:33:38Z",
+                        "user_mtime": "2020-12-15T21:33:38Z",
+                        "publish": false,
+                        "jsonmodel_type": "revision_statement",
+                        "uri": "/revision_statement/6416",
+                        "repository": {
+                            "ref": "/repositories/2"
+                        }
+                    }
+                ],
+                "instances": [
+
+                ],
+                "deaccessions": [
+
+                ],
+                "related_accessions": [
+
+                ],
+                "classifications": [
+
+                ],
+                "notes": [
+                    {
+                        "jsonmodel_type": "note_multipart",
+                        "persistent_id": "b533ccd36e5418a85c08d6d9907e48fe",
+                        "label": "Biographical/Historical note",
+                        "type": "bioghist",
+                        "subnotes": [
+                            {
+                                "jsonmodel_type": "note_text",
+                                "content": "Nelson A. Rockefeller served as governor of New York from January 1, 1959, to December 18, 1973. He was the first person elected to four consecutive four-year terms as a state governor.\\n\\n",
+                                "publish": true
+                            }
+                        ],
+                        "publish": true
+                    },
+                    {
+                        "jsonmodel_type": "note_multipart",
+                        "persistent_id": "5894d00788b2804760748d6b917ea5f2",
+                        "label": "File Plan note",
+                        "type": "fileplan",
+                        "subnotes": [
+                            {
+                                "jsonmodel_type": "note_text",
+                                "content": "Former Classification: III 15 33\\n",
+                                "publish": true
+                            }
+                        ],
+                        "publish": true
+                    },
+                    {
+                        "jsonmodel_type": "note_multipart",
+                        "persistent_id": "a71a487beab718b91941b228a34a8dec",
+                        "label": "Conditions Governing Use note",
+                        "type": "userestrict",
+                        "rights_restriction": {
+                            "local_access_restriction_type": [
+
+                            ]
+                        },
+                        "subnotes": [
+                            {
+                                "jsonmodel_type": "note_text",
+                                "content": "Reproduction/duplication of archival items is routinely provided in accordance with fair use. If the RAC does not hold copyright for an archival collection or items within a collection, it is the users responsibility to contact the copyright holder, or make a fair effort to do so, prior to publication.\\n\\n",
+                                "publish": true
+                            }
+                        ],
+                        "publish": true
+                    },
+                    {
+                        "jsonmodel_type": "note_multipart",
+                        "persistent_id": "059864ababa737a8afd1e36f590d8d93",
+                        "label": "Conditions Governing Access note",
+                        "type": "accessrestrict",
+                        "rights_restriction": {
+                            "local_access_restriction_type": [
+
+                            ]
+                        },
+                        "subnotes": [
+                            {
+                                "jsonmodel_type": "note_text",
+                                "content": "Open for research with select materials restricted as noted. Brittle or damaged items are available at the discretion of RAC. Researchers interested in accessing digital media (floppy disks, CDs, DVDs, etc.) or audiovisual material (audio cassettes, VHS, etc.) in this collection must use an access surrogate. The original items may not be accessed because of preservation concerns. To request an access surrogate be made, or if you are unsure if there is an access surrogate, please contact an archivist.",
+                                "publish": true
+                            }
+                        ],
+                        "publish": true
+                    },
+                    {
+                        "jsonmodel_type": "note_multipart",
+                        "persistent_id": "1ddc076c7cb79fede5e6fa2c1ea8e9fd",
+                        "label": "Processing Information note",
+                        "type": "processinfo",
+                        "subnotes": [
+                            {
+                                "jsonmodel_type": "note_text",
+                                "content": "Processing Level 2: Limited Processing. Records primarily remain in original folders and storage boxes. \\n\\n",
+                                "publish": false
+                            }
+                        ],
+                        "publish": false
+                    },
+                    {
+                        "jsonmodel_type": "note_multipart",
+                        "persistent_id": "074fd58fe4c060b89935974f1c28e476",
+                        "label": "Scope and Contents note",
+                        "type": "scopecontent",
+                        "subnotes": [
+                            {
+                                "jsonmodel_type": "note_text",
+                                "content": "This series contains Rockefellers reading copy of speeches and transcripts of his remarks at press conferences. Some files contain drafts of speeches. Broad topics include both New York state and national government, politics, and public policy issues. Also included are speeches he made during his campaigns for the Republican presidential nomination in 1960, 1964, and 1968.",
+                                "publish": true
+                            }
+                        ],
+                        "publish": true
+                    },
+                    {
+                        "jsonmodel_type": "note_multipart",
+                        "persistent_id": "6bae2c2ab57ec9d46b97578b1dec6da8",
+                        "label": "Arrangement note",
+                        "type": "arrangement",
+                        "subnotes": [
+                            {
+                                "jsonmodel_type": "note_text",
+                                "content": "This series is arranged chronologically.\\n\\n",
+                                "publish": true
+                            }
+                        ],
+                        "publish": true
+                    }
+                ],
+                "uri": "/repositories/2/resources/571",
+                "repository": {
+                    "ref": "/repositories/2"
+                },
+                "tree": {
+                    "ref": "/repositories/2/resources/571/tree"
+                }
+            }
+        }
+    ],
+    "instances": [
+        {
+            "lock_version": 0,
+            "created_by": "k.martin",
+            "last_modified_by": "k.martin",
+            "create_time": "2021-01-10T02:12:32Z",
+            "system_mtime": "2021-01-10T02:12:32Z",
+            "user_mtime": "2021-01-10T02:12:32Z",
+            "instance_type": "mixed materials",
+            "jsonmodel_type": "instance",
+            "is_representative": false,
+            "sub_container": {
+                "lock_version": 0,
+                "indicator_2": "3463",
+                "created_by": "k.martin",
+                "last_modified_by": "k.martin",
+                "create_time": "2021-01-10T02:12:32Z",
+                "system_mtime": "2021-01-10T02:12:32Z",
+                "user_mtime": "2021-01-10T02:12:32Z",
+                "type_2": "folder",
+                "jsonmodel_type": "sub_container",
+                "top_container": {
+                    "ref": "/repositories/2/top_containers/51665"
+                }
+            }
+        }
+    ],
+    "notes": [
+
+    ],
+    "uri": "/repositories/2/archival_objects/312213",
+    "repository": {
+        "ref": "/repositories/2"
+    },
+    "resource": {
+        "ref": "/repositories/2/resources/571"
+    },
+    "has_unpublished_ancestor": false
+}
