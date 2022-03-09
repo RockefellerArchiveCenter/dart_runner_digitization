@@ -10,6 +10,12 @@ attrs==21.4.0
     # via archivessnake
 boltons==21.0.0
     # via archivessnake
+boto3==1.21.15
+    # via -r requirements.in
+botocore==1.24.15
+    # via
+    #   boto3
+    #   s3transfer
 certifi==2021.10.8
     # via requests
 charset-normalizer==2.0.12
@@ -18,15 +24,27 @@ idna==3.3
     # via requests
 jarowinkler==1.0.1
     # via rapidfuzz
+jmespath==0.10.0
+    # via
+    #   boto3
+    #   botocore
 more-itertools==8.12.0
     # via archivessnake
+python-dateutil==2.8.2
+    # via botocore
 pyyaml==6.0
     # via archivessnake
 rapidfuzz==2.0.6
     # via archivessnake
 requests==2.27.1
     # via archivessnake
+s3transfer==0.5.2
+    # via boto3
+six==1.16.0
+    # via python-dateutil
 structlog==21.5.0
     # via archivessnake
 urllib3==1.26.8
-    # via requests
+    # via
+    #   botocore
+    #   requests
