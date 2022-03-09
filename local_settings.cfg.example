@@ -9,6 +9,9 @@ access_key = 123456789
 secret_key = 987654321
 bucket = rac-iiif
 
+[DART]
+workflow_json = /path/to/workflow.json
+
 [Directories]
 root_dir = /path/to/files
 tmp_dir = /path/to/files

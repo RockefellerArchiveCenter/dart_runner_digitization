@@ -1,6 +1,7 @@
 local_settings.cfg
 *.log
 __pycache__
+*.json
 
 # System files
 .DS_Store
