@@ -1,2 +1,5 @@
 ArchivesSnake==0.9.1
 boto3==1.21.15
+moto==3.0.7
+pytest==7.0.1
+pytest-mock==3.7.0
