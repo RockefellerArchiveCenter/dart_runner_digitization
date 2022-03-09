@@ -2,6 +2,7 @@ local_settings.cfg
 *.log
 __pycache__
 *.json
+dart-runner
 
 # System files
 .DS_Store
