@@ -25,10 +25,10 @@ class DigitizationPipeline:
         self.root_dir = self.config.get("Directories", "root_dir")
         self.tmp_dir = self.config.get("Directories", "tmp_dir")
         self.as_client = ArchivesSpaceClient(
-            self.config["ArchivesSpace", "baseurl"], self.config["ArchivesSpace", "username"], self.config["ArchivesSpace", "password"])
+            self.config["ArchivesSpace"]["baseurl"], self.config["ArchivesSpace"]["username"], self.config["ArchivesSpace"]["password"])
         self.s3_uploader = S3Uploader(
             self.config["AWS"]["region_name"], self.config["AWS"]["access_key"], self.config["AWS"]["secret_key"], self.config["AWS"]["bucket"])
-        self.ignore_filepath = self.config.get("Ignore", "ignore_list")
+        self.ignore_filepath = self.config["Ignore"]["ignore_list"]
         self.workflow_json = self.config["DART"]["workflow_json"]
 
     def run(self, rights_ids):
