@@ -7,7 +7,7 @@ Uses [DART Runner](https://github.com/APTrust/dart-runner) to create bags of dig
 
 The entire suite has the following system dependencies:
 - Python 3 (tested on Python 3.10)
-- ArchivesSnake (Python library) (0.9.1 or greater)
+- ArchivesSnake (Python library) (0.9.1 or greater) 
 - [DART](https://github.com/APTrust/dart)
 
 ## Configuration
@@ -19,7 +19,7 @@ This script requires a `local_settings.cfg` file. For an example of the sections
 After cloning this repository and creating `local_settings.cfg`, run `dart_pipeline.py` with the directory containing original files (in directories with ArchivesSpace RefIDs), a temporary directory, and the list of rights IDs as arguments. E.g.,
 
 ```
-$ python dart_pipeline.py /path/to/original/files /path/to/tmp -l 3 9
+$ python dart_pipeline.py -l 3 9
 ```
 
 ### Expected structure of original files

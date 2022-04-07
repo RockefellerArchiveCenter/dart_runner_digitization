@@ -3,15 +3,14 @@ from shutil import copy2
 
 
 def format_aspace_date(dates):
-    '''
-    Formats ASpace dates so that they can be parsed by Aquila. If assumes beginning of month or year if a start date, and end of month or year if an end date.
+    """Formats ASpace dates so that they can be parsed by Aquila. It assumes beginning of month or year if a start date, and end of month or year if an end date.
 
     Args:
         dates (dict): ArchivesSpace date JSON
 
     Returns:
         Tuple of a begin date and end date in format YYYY-MM-DD
-    '''
+    """
     begin_date = dates['begin']
     end_date = False
     if dates['date_type'] == 'single':
@@ -30,15 +29,14 @@ def format_aspace_date(dates):
 
 
 def get_closest_dates(archival_object):
-    '''
-    Takes JSON for an archival object and returns a date from that object or its nearest ancestor with a date.
+    """Takes JSON for an archival object and returns a date from that object or its nearest ancestor with a date.
 
     Args:
         archival_object: JSON for AS archival object with resolved ancestors
 
     Returns:
         Dictionary for a date JSON
-    '''
+    """
     # TODO: error handling
     dates = False
     if archival_object.get("dates"):
@@ -52,13 +50,13 @@ def get_closest_dates(archival_object):
 
 
 def create_tag(tag_name, user_value, tag_file="bag-info.txt"):
-    """Return dictionary for a custom DART tag"""
+    """Return dictionary for a custom DART tag."""
     return {"tagFile": tag_file, "tagName": tag_name, "userValue": user_value}
 
 
 def matching_files(directory, suffix=None, prepend=False):
-    """Get a list of files that start with a specific prefix, optionally removing
-    any files that end in `_001`.
+    """Get a list of files that start with a specific prefix, optionally removing any files that end in `_001`.
+
     Args:
         directory (str): The directory containing files.
         suffix (str): A suffix (file extension) to match filenames against.
@@ -76,7 +74,7 @@ def matching_files(directory, suffix=None, prepend=False):
 
 
 def copy_tiff_files(source_dir, dest_dir):
-    """Takes Path objects"""
+    """Takes Path objects."""
     tiff_files = matching_files(source_dir, suffix="tif")
     if not dest_dir.is_dir():
         dest_dir.mkdir(parents=True)
@@ -88,7 +86,7 @@ def copy_tiff_files(source_dir, dest_dir):
 
 
 def get_access_pdf(pdf_dir):
-    """Gets a PDF file from a directory. Fails if there are multiple PDF files
+    """Gets a PDF file from a directory. Fails if there are multiple PDF files.
 
     Args:
         pdf_dir (Path obj): directory containing PDF file

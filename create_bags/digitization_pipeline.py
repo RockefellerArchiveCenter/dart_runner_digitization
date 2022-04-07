@@ -77,9 +77,9 @@ class DigitizationPipeline:
         return master_tiffs + master_edited_tiffs
 
     def get_ignore_list(self):
-        """Parses a text file whose filepath is provided in the config
+        """Parses a text file whose filepath is provided in the config.
 
-        Returns a list"""
-
+        Returns a list
+        """
         ignore_list = open(self.ignore_filepath).readlines()
         return [i.replace('\n', '') for i in ignore_list]

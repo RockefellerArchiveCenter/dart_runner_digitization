@@ -11,12 +11,16 @@ class BagCreator:
         self.tmp_dir = tmp_dir
 
     def run(self, refid, ao_uri, begin_date, end_date, rights_ids, files):
-        """
+        """Uses DART Runner to create a bag.
+
         Args:
-        refid (str)
-        rights_ids (array)
+            refid (str): ArchivesSpace RefId
+            ao_uri (str): ArchivesSpace URI
+            begin_date (str): begin date
+            end_date (str): end date
+            rights_ids (array): list of rights IDs (which are integers)
+            files (array): list of full filepaths to include in bag
         """
-        # directory_to_bag = "some directory"
         self.refid = refid
         self.ao_uri = ao_uri
         self.job_params = self.construct_job_params(
@@ -25,15 +29,15 @@ class BagCreator:
         return self.refid
 
     def construct_job_params(self, rights_ids, files, begin_date, end_date):
-        """Formats information for DART job parameters
+        """Formats information for DART job parameters.
 
         Args:
             rights_ids (array): list of rights ids
             files (array): list of full filepaths
             dates (tuple): begin and end dates
 
-        Returns a dictionary"""
-
+        Returns a dictionary
+        """
         job_params = {"packageName": "{}.tar".format(self.refid),
                       "files": files,
                       "tags": [{"tagFile": "bag-info.txt",
@@ -53,7 +57,7 @@ class BagCreator:
         return job_params
 
     def create_dart_job(self):
-        """Runs a DART job"""
+        """Runs a DART job."""
         job_json_input = (json.dumps(self.job_params) + "\n").encode()
         cmd = f"dart-runner --workflow={self.workflow_json} --output-dir={self.tmp_dir}"
         child = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, close_fds=True)
