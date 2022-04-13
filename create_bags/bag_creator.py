@@ -21,12 +21,15 @@ class BagCreator:
             rights_ids (array): list of rights IDs (which are integers)
             files (array): list of full filepaths to include in bag
         """
-        self.refid = refid
-        self.ao_uri = ao_uri
-        self.job_params = self.construct_job_params(
-            rights_ids, files, begin_date, end_date)
-        self.create_dart_job()
-        return self.refid
+        try:
+            self.refid = refid
+            self.ao_uri = ao_uri
+            self.job_params = self.construct_job_params(
+                rights_ids, files, begin_date, end_date)
+            self.create_dart_job()
+            return self.refid
+        except Exception as e:
+            raise(e)
 
     def construct_job_params(self, rights_ids, files, begin_date, end_date):
         """Formats information for DART job parameters.
