@@ -2,6 +2,7 @@
 baseurl = http://localhost:8089
 username = admin
 password = admin
+repository = 2
 
 [AWS]
 region_name = us-east-1
@@ -16,5 +17,5 @@ workflow_json = /path/to/workflow.json
 root_dir = /path/to/files
 tmp_dir = /path/to/files
 
-[Ignore]
-ignore_list = /path/to/ignore_list.txt
+[Other]
+processed_list = /path/to/processed_list.txt

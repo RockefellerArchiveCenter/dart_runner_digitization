@@ -28,18 +28,18 @@ class DigitizationPipeline:
             self.config["ArchivesSpace"]["baseurl"], self.config["ArchivesSpace"]["username"], self.config["ArchivesSpace"]["password"])
         self.s3_uploader = S3Uploader(
             self.config["AWS"]["region_name"], self.config["AWS"]["access_key"], self.config["AWS"]["secret_key"], self.config["AWS"]["bucket"])
-        self.ignore_filepath = self.config["Ignore"]["ignore_list"]
+        self.processed_filepath = self.config["Other"]["processed_list"]
         self.workflow_json = self.config["DART"]["workflow_json"]
 
     def run(self, rights_ids):
         print("Starting run...")
-        self.ignore_list = self.get_ignore_list()
+        self.processed_list = self.get_processed_list()
         refids = [
             d.name for d in Path(
                 self.root_dir).iterdir() if Path(
                 self.root_dir,
                 d).iterdir() and len(
-                d.name) == 32 and d.name not in self.ignore_list]
+                d.name) == 32 and d.name not in self.processed_list]
         for refid in refids:
             try:
                 ao_uri = self.as_client.get_uri_from_refid(refid)
@@ -59,7 +59,7 @@ class DigitizationPipeline:
                     refid, ao_uri, ao_data, rights_ids, list_of_files)
                 logging.info(f"Bag successfully created: {created_bag}")
                 rmtree(dir_to_bag)
-                with open(self.ignore_filepath, "a") as f:
+                with open(self.processed_filepath, "a") as f:
                     f.write(f"\n{refid}")
                 logging.info(
                     f"Directory {dir_to_bag} successfully removed")
@@ -76,10 +76,10 @@ class DigitizationPipeline:
                 self.root_dir, refid, "master_edited"), Path(self.tmp_dir, refid, "service"))
         return master_tiffs + master_edited_tiffs
 
-    def get_ignore_list(self):
+    def get_processed_list(self):
         """Parses a text file whose filepath is provided in the config.
 
         Returns a list
         """
-        ignore_list = open(self.ignore_filepath).readlines()
-        return [i.replace('\n', '') for i in ignore_list]
+        processed_list = open(self.processed_filepath).readlines()
+        return [i.replace('\n', '') for i in processed_list]

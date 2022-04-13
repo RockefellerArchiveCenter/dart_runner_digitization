@@ -14,7 +14,7 @@ The entire suite has the following system dependencies:
 
 This script requires a `local_settings.cfg` file. For an example of the sections and keys required, see [local_settings.cfg.example](local_settings.cfg.example) in this repository.
 
-The config file includes a path to an ignore list, which is a text file that the script automatically appends to when a bag has been completed. This ensures that a directory is not run over twice.
+The config file includes a path to an already processed list, which is a text file that the script automatically appends to when a bag has been completed. This ensures that a directory is not run over twice.
 
 ## Quick start
 
