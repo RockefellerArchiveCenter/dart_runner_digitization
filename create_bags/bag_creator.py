@@ -34,7 +34,8 @@ class BagCreator:
         Args:
             rights_ids (array): list of rights ids
             files (array): list of full filepaths
-            dates (tuple): begin and end dates
+            begin_date (string): begin date
+            end_date (string): end date
 
         Returns a dictionary
         """
