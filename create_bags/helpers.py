@@ -58,7 +58,7 @@ def matching_files(directory, suffix=None, prepend=False):
     """Get a list of files that start with a specific prefix, optionally removing any files that end in `_001`.
 
     Args:
-        directory (str): The directory containing files.
+        directory (Path object): The directory containing files.
         suffix (str): A suffix (file extension) to match filenames against.
         prepend (bool): Add the directory to the filepaths returned
     Returns:
@@ -66,8 +66,8 @@ def matching_files(directory, suffix=None, prepend=False):
     """
     HIDDEN_FILES = (
         ".", "Thumbs")  # files which start with these strings will be skipped
-    files = sorted([f for f in directory.iterdir() if (
-        directory.joinpath(f).is_file() and not str(f.name).startswith(HIDDEN_FILES))])
+    files = [f for f in directory.iterdir() if (
+        directory.joinpath(f).is_file() and not str(f.name).startswith(HIDDEN_FILES))]
     if suffix:
         files = sorted([f for f in files if str(f.name).endswith(suffix)])
     return [directory.joinpath(f) for f in files] if prepend else files
