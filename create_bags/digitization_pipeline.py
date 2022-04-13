@@ -25,9 +25,15 @@ class DigitizationPipeline:
         self.root_dir = self.config.get("Directories", "root_dir")
         self.tmp_dir = self.config.get("Directories", "tmp_dir")
         self.as_client = ArchivesSpaceClient(
-            self.config["ArchivesSpace"]["baseurl"], self.config["ArchivesSpace"]["username"], self.config["ArchivesSpace"]["password"], self.config["ArchivesSpace"]["repository"])
+            self.config["ArchivesSpace"]["baseurl"],
+            self.config["ArchivesSpace"]["username"],
+            self.config["ArchivesSpace"]["password"],
+            self.config["ArchivesSpace"]["repository"])
         self.s3_uploader = S3Uploader(
-            self.config["AWS"]["region_name"], self.config["AWS"]["access_key"], self.config["AWS"]["secret_key"], self.config["AWS"]["bucket"])
+            self.config["AWS"]["region_name"],
+            self.config["AWS"]["access_key"],
+            self.config["AWS"]["secret_key"],
+            self.config["AWS"]["bucket"])
         self.processed_filepath = self.config["Other"]["processed_list"]
         self.workflow_json = self.config["DART"]["workflow_json"]
 
@@ -72,8 +78,10 @@ class DigitizationPipeline:
             Path(self.root_dir, refid, "master"), dir_to_bag)
         master_edited_tiffs = []
         if Path(self.root_dir, refid, "master_edited").is_dir():
-            master_edited_tiffs = copy_tiff_files(Path(
-                self.root_dir, refid, "master_edited"), Path(self.tmp_dir, refid, "service"))
+            master_edited_tiffs = copy_tiff_files(
+                Path(
+                    self.root_dir, refid, "master_edited"), Path(
+                    self.tmp_dir, refid, "service"))
         return master_tiffs + master_edited_tiffs
 
     def get_processed_list(self):
