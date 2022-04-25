@@ -18,9 +18,13 @@ class DigitizationPipeline:
         self.config.read("local_settings.cfg")
         logging.basicConfig(
             datefmt='%m/%d/%Y %I:%M:%S %p',
-            filename='bag_creator.log',
             format='%(asctime)s %(message)s',
-            level=logging.INFO)
+            level=logging.INFO,
+            handlers=[
+                logging.FileHandler("bag_creator.log"),
+                logging.StreamHandler()
+            ])
+
         self.root_dir = self.config.get("Directories", "root_dir")
         self.tmp_dir = self.config.get("Directories", "tmp_dir")
         self.as_client = ArchivesSpaceClient(
@@ -37,7 +41,7 @@ class DigitizationPipeline:
         self.workflow_json = self.config["DART"]["workflow_json"]
 
     def run(self, rights_ids):
-        print("Starting run...")
+        logging.info("Starting run...")
         self.processed_list = self.get_processed_list()
         refids = [
             d.name for d in Path(
@@ -68,7 +72,6 @@ class DigitizationPipeline:
                 logging.info(
                     f"Directory {dir_to_bag} successfully removed")
             except Exception as e:
-                print(e)
                 logging.error(f"Error for ref_id {refid}: {e}")
 
     def add_files_to_dir(self, refid, dir_to_bag):
