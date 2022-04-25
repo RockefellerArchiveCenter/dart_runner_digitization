@@ -8,8 +8,7 @@ import shortuuid
 from .archivesspace import ArchivesSpaceClient
 from .aws_upload import S3Uploader
 from .bag_creator import BagCreator
-from .helpers import (copy_tiff_files, format_aspace_date, get_access_pdf,
-                      get_closest_dates)
+from .helpers import copy_tiff_files, format_aspace_date, get_access_pdf
 
 
 class DigitizationPipeline:
@@ -58,11 +57,10 @@ class DigitizationPipeline:
                     f"PDF successfully uploaded: {dimes_identifier}.pdf")
                 dir_to_bag = Path(self.tmp_dir, refid)
                 list_of_files = self.add_files_to_dir(refid, dir_to_bag)
-                ao_data = self.as_client.get_ao_data(self.ao_uri)
                 begin_date, end_date = format_aspace_date(
-                    get_closest_dates(ao_data))
+                    self.as_client.find_closest_dates(ao_uri))
                 created_bag = BagCreator().run(
-                    refid, ao_uri, ao_data, rights_ids, list_of_files)
+                    refid, ao_uri, begin_date, end_date, rights_ids, list_of_files)
                 logging.info(f"Bag successfully created: {created_bag}")
                 rmtree(dir_to_bag)
                 with open(self.processed_filepath, "a") as f:

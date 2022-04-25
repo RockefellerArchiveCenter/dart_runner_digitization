@@ -1,4 +1,5 @@
 from asnake.client import ASnakeClient
+from asnake.utils import find_closest_value
 
 
 class ArchivesSpaceClient:
@@ -19,8 +20,11 @@ class ArchivesSpaceClient:
             raise Exception("{} results found for search {}".format(
                 len(results.get("archival_objects")), find_by_refid_url))  # TODO: make it clear that we want one result
 
-    def get_ao_data(self, ao_uri):
-        """Gets data for an archival object, including ancestors."""
-        return self.client.get(
-            ao_uri, params={
-                "resolve": ["ancestors"]}).json()
+    def find_closest_dates(self, ao_uri):
+        """Uses find_closest_value from ArchivesSnake utils to get closest date.
+
+        Args:
+            ao_uri (str): archival object uri
+        """
+        all_dates = find_closest_value(ao_uri, "dates", self.client)
+        return all_dates[0]
