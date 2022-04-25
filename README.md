@@ -14,7 +14,7 @@ The entire suite has the following system dependencies:
 
 This script requires a `local_settings.cfg` file. For an example of the sections and keys required, see [local_settings.cfg.example](local_settings.cfg.example) in this repository.
 
-The config file includes a path to an already processed list, which is a text file that the script automatically appends to when a bag has been completed. This ensures that a directory is not run over twice.
+The config file includes a path to an already processed list, which is a text file that the script automatically appends to when a bag has been completed. This ensures that a directory is not run over twice. The script automatically ignores directory names that are not the same number of characters as an RAC ASpace RefID, so these directories do not need to be added to the already processed list.
 
 ## Quick start
 
