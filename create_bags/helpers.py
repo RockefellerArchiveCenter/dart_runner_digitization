@@ -28,27 +28,6 @@ def format_aspace_date(dates):
     return begin_date, end_date
 
 
-def get_closest_dates(archival_object):
-    """Takes JSON for an archival object and returns a date from that object or its nearest ancestor with a date.
-
-    Args:
-        archival_object: JSON for AS archival object with resolved ancestors
-
-    Returns:
-        Dictionary for a date JSON
-    """
-    # TODO: error handling
-    dates = False
-    if archival_object.get("dates"):
-        dates = archival_object['dates'][0]
-    else:
-        for a in archival_object.get("ancestors"):
-            if a.get("_resolved").get("dates"):
-                dates = a['_resolved']['dates'][0]
-                break
-    return dates
-
-
 def create_tag(tag_name, user_value, tag_file="bag-info.txt"):
     """Return dictionary for a custom DART tag."""
     return {"tagFile": tag_file, "tagName": tag_name, "userValue": user_value}
