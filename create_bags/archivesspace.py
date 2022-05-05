@@ -17,8 +17,8 @@ class ArchivesSpaceClient:
         if len(results.get("archival_objects")) == 1:
             return results['archival_objects'][0]['ref']
         else:
-            raise Exception("{} results found for search {}".format(
-                len(results.get("archival_objects")), find_by_refid_url))  # TODO: make it clear that we want one result
+            raise Exception("{} results found for search {}. Expected one result.".format(
+                len(results.get("archival_objects")), find_by_refid_url))
 
     def find_closest_dates(self, ao_uri):
         """Uses find_closest_value from ArchivesSnake utils to get closest date.
