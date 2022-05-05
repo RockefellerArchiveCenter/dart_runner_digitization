@@ -8,11 +8,13 @@ Uses [DART Runner](https://github.com/APTrust/dart-runner) to create bags of dig
 The entire suite has the following system dependencies:
 - Python 3 (tested on Python 3.10)
 - [ArchivesSnake](https://pypi.org/project/ArchivesSnake/) (Python library) (0.9.1 or greater) 
-- [DART](https://github.com/APTrust/dart)
+- [DART Runner](https://github.com/APTrust/dart-runner)
 
 ## Configuration
 
 This script requires a `local_settings.cfg` file. For an example of the sections and keys required, see [local_settings.cfg.example](local_settings.cfg.example) in this repository.
+
+The config file includes a path to Workflow JSON to be used with DART Runner; this must be exported from the DART GUI. [For more information see the DART documentation.](https://aptrust.github.io/dart-docs/users/workflows/#exporting-a-workflow)
 
 The config file includes a path to an already processed list, which is a text file that the script automatically appends to when a bag has been completed. This ensures that a directory is not run over twice. The script automatically ignores directory names that are not the same number of characters as an RAC ASpace RefID, so these directories do not need to be added to the already processed list.
 
