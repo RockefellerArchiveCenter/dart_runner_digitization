@@ -6,7 +6,7 @@ Uses [DART Runner](https://github.com/APTrust/dart-runner) to create bags of dig
 ## Requirements
 
 The entire suite has the following system dependencies:
-- Python 3 (tested on Python 3.10)
+- Python 3 (tested on Python 3.9)
 - [ArchivesSnake](https://pypi.org/project/ArchivesSnake/) (Python library) (0.9.1 or greater) 
 - [DART Runner](https://github.com/APTrust/dart-runner)
 
