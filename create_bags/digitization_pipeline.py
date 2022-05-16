@@ -65,7 +65,7 @@ class DigitizationPipeline:
                 list_of_files = self.add_files_to_dir(refid, dir_to_bag)
                 begin_date, end_date = format_aspace_date(
                     self.as_client.find_closest_dates(ao_uri))
-                created_bag = BagCreator().run(
+                created_bag = BagCreator(self.workflow_json, self.tmp_dir).run(
                     refid, ao_uri, begin_date, end_date, rights_ids, list_of_files)
                 logging.info(f"Bag successfully created: {created_bag}")
                 rmtree(dir_to_bag)
