@@ -15,9 +15,9 @@ class DigitizationPipeline:
 
     def __init__(self):
         self.config = ConfigParser()
-        current_path = Path(__file__).parents[0].resolve()
-        config_path = Path(current_path, "local_settings.cfg")
-        self.config.read(str(config_path))
+        # current_path = Path(__file__).parents[0].resolve()
+        # config_path = Path(current_path, "local_settings.cfg")
+        self.config.read("local_settings.cfg")
         logging.basicConfig(
             datefmt='%m/%d/%Y %I:%M:%S %p',
             format='%(asctime)s %(message)s',
