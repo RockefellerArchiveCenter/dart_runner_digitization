@@ -10,11 +10,11 @@ attrs==21.4.0
     # via archivessnake
 boltons==21.0.0
     # via archivessnake
-boto3==1.22.10
+boto3==1.23.1
     # via
     #   -r requirements.in
     #   moto
-botocore==1.25.10
+botocore==1.26.1
     # via
     #   boto3
     #   moto
@@ -43,7 +43,7 @@ markupsafe==2.1.1
     #   moto
 more-itertools==8.13.0
     # via archivessnake
-moto==3.1.8
+moto==3.1.9
     # via -r requirements.in
 pycparser==2.21
     # via cffi
@@ -66,6 +66,8 @@ responses==0.20.0
     # via moto
 s3transfer==0.5.2
     # via boto3
+shortuuid==1.0.9
+    # via -r requirements.in
 six==1.16.0
     # via python-dateutil
 structlog==21.5.0
