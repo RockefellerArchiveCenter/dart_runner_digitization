@@ -9,7 +9,7 @@ from create_bags.helpers import create_tag, format_aspace_date
 def test_create_tag():
     created_tag = create_tag("testName", "test value")
     expected_result = {"tagFile": "bag-info.txt",
-                       "tagName": "testName", "userValue": "test value"}
+                       "tagName": "testName", "value": "test value"}
     assert created_tag == expected_result
 
 
