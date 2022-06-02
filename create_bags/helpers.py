@@ -30,7 +30,7 @@ def format_aspace_date(dates):
 
 def create_tag(tag_name, user_value, tag_file="bag-info.txt"):
     """Return dictionary for a custom DART tag."""
-    return {"tagFile": tag_file, "tagName": tag_name, "userValue": user_value}
+    return {"tagFile": tag_file, "tagName": tag_name, "value": user_value}
 
 
 def matching_files(directory, suffix=None, prepend=False):

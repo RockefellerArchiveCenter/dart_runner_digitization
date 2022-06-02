@@ -6,7 +6,8 @@ from .helpers import create_tag
 
 class BagCreator:
 
-    def __init__(self, workflow_json, tmp_dir):
+    def __init__(self, dart_command, workflow_json, tmp_dir):
+        self.dart_command = dart_command
         self.workflow_json = workflow_json
         self.tmp_dir = tmp_dir
 
@@ -63,7 +64,7 @@ class BagCreator:
     def create_dart_job(self):
         """Runs a DART job."""
         job_json_input = (json.dumps(self.job_params) + "\n").encode()
-        cmd = f"dart-runner --workflow={self.workflow_json} --output-dir={self.tmp_dir}"
+        cmd = f"{self.dart_command} --workflow={self.workflow_json} --output-dir={self.tmp_dir}"
         child = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, close_fds=True)
         stdout_data, stderr_data = child.communicate(job_json_input)
         if child.returncode != 0:

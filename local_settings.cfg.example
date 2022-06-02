@@ -11,6 +11,7 @@ secret_key = 987654321
 bucket = rac-iiif
 
 [DART]
+dart = ./dart-runner
 workflow_json = /path/to/workflow.json
 
 [Directories]
