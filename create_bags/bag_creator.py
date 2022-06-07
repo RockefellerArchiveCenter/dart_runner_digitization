@@ -47,16 +47,16 @@ class BagCreator:
                       "files": files,
                       "tags": [{"tagFile": "bag-info.txt",
                                 "tagName": "ArchivesSpace-URI",
-                                "userValue": self.ao_uri},
+                                "value": self.ao_uri},
                                {"tagFile": "bag-info.txt",
                                 "tagName": "Start-Date",
-                                "userValue": begin_date},
+                                "value": begin_date},
                                {"tagFile": "bag-info.txt",
                                 "tagName": "End-Date",
-                                "userValue": end_date},
+                                "value": end_date},
                                {"tagFile": "bag-info.txt",
                                 "tagName": "Origin",
-                                "userValue": "digitization"}]}
+                                "value": "digitization"}]}
         for rights_id in rights_ids:
             job_params['tags'].append(create_tag("Rights-ID", str(rights_id)))
         return job_params

@@ -13,7 +13,7 @@ def test_construct_job_params():
     assert isinstance(job_params, dict)
     for tag in job_params["tags"]:
         if tag["tagName"] == "Start-Date":
-            assert tag["userValue"] == "1940-01-01"
+            assert tag["value"] == "1940-01-01"
     assert len(job_params["tags"]) == 6
 
 
