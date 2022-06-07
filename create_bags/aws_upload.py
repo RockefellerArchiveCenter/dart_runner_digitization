@@ -9,7 +9,7 @@ class S3Uploader(object):
         self.bucket = s3.Bucket(bucket)
 
     def upload_pdf_to_s3(self, filepath, object_name):
-        """Uploads a PDF file to a 'pdf' directory
+        """Uploads a PDF file to a 'pdf' directory.
 
         Args:
             filepath (Path obj): full filepath to the PDF to upload

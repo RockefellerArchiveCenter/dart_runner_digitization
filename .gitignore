@@ -1,6 +1,6 @@
 local_settings.cfg
 *.log
-__pycache__
+*/__pycache__
 *.json
 dart-runner
 

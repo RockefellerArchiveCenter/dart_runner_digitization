@@ -2,14 +2,14 @@ import json
 from os.path import join
 
 import pytest
-from create_bags.helpers import (create_tag, format_aspace_date,
-                                 get_closest_dates)
+
+from create_bags.helpers import create_tag, format_aspace_date
 
 
 def test_create_tag():
     created_tag = create_tag("testName", "test value")
     expected_result = {"tagFile": "bag-info.txt",
-                       "tagName": "testName", "userValue": "test value"}
+                       "tagName": "testName", "value": "test value"}
     assert created_tag == expected_result
 
 
@@ -17,11 +17,6 @@ def test_format_aspace_date(ao_date_data):
     dates = format_aspace_date(ao_date_data)
     assert dates[0] == "1950-01-01"
     assert dates[1] == "1969-12-31"
-
-
-def test_get_dates(ao_data):
-    date_data = get_closest_dates(ao_data)
-    assert isinstance(date_data, dict)
 
 
 @pytest.fixture
