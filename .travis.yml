@@ -1,0 +1,19 @@
+
+language: python
+cache:
+  directories:
+    - $HOME/.cache/pip
+    - $HOME/.cache/pre-commit
+install:
+  - pip install tox
+  - cp local_settings.cfg.example local_settings.cfg
+script:
+  - tox
+matrix:
+  include:
+    - python: "3.9"
+      env: TOXENV=py39
+    - python: "3.9"
+      env: TOXENV=linting
+notifications:
+  email: false
