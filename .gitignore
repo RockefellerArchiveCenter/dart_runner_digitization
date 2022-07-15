@@ -3,6 +3,7 @@ local_settings.cfg
 */__pycache__
 *.json
 dart-runner
+.tox
 
 # System files
 .DS_Store
