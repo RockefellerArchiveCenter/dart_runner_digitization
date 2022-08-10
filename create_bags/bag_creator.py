@@ -1,5 +1,5 @@
 import json
-from subprocess import PIPE, Popen
+import subprocess
 
 from .helpers import create_tag
 
@@ -63,11 +63,7 @@ class BagCreator:
 
     def create_dart_job(self):
         """Runs a DART job."""
-        job_json_input = (json.dumps(self.job_params) + "\n").encode()
-        cmd = f"{self.dart_command} --workflow={self.workflow_json} --output-dir={self.tmp_dir}"
-        child = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, close_fds=True)
-        stdout_data, stderr_data = child.communicate(job_json_input)
-        if child.returncode != 0:
-            stdout_message = stdout_data.decode('utf-8') if stdout_data else ""
-            stderr_message = stderr_data.decode('utf-8') if stderr_data else ""
-            raise Exception(stdout_message, stderr_message)
+        with open("job_params.json", "w") as param_file:
+            json.dump(self.job_params, param_file)
+        cmd = f"{self.dart_command} --workflow={self.workflow_json} --output-dir={self.tmp_dir} < job_params.json"
+        subprocess.run(cmd, check=True)
