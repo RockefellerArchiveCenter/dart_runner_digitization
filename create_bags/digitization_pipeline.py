@@ -42,6 +42,7 @@ class DigitizationPipeline:
         self.processed_filepath = self.config["Other"]["processed_list"]
         self.dart_command = self.config["DART"]["dart"]
         self.workflow_json = self.config["DART"]["workflow_json"]
+        self.job_params_file = self.config["DART"]["job_params_file"]
 
     def run(self, rights_ids):
         logging.info("Starting run...")
@@ -66,7 +67,7 @@ class DigitizationPipeline:
                 list_of_files = self.add_files_to_dir(refid, dir_to_bag)
                 begin_date, end_date = format_aspace_date(
                     self.as_client.find_closest_dates(ao_uri))
-                created_bag = BagCreator(self.dart_command, self.workflow_json, self.tmp_dir).run(
+                created_bag = BagCreator(self.dart_command, self.workflow_json, self.tmp_dir, self.job_params_file).run(
                     refid, ao_uri, begin_date, end_date, rights_ids, list_of_files)
                 logging.info(f"Bag successfully created: {created_bag}")
                 rmtree(dir_to_bag)
