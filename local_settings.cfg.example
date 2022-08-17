@@ -13,6 +13,7 @@ bucket = rac-iiif
 [DART]
 dart = ./dart-runner
 workflow_json = /path/to/workflow.json
+job_params_file = /path/to/job_params.json
 
 [Directories]
 root_dir = /path/to/files

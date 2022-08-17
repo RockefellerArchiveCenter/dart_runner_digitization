@@ -1,15 +1,16 @@
 import json
-from subprocess import PIPE, Popen
+import subprocess
 
 from .helpers import create_tag
 
 
 class BagCreator:
 
-    def __init__(self, dart_command, workflow_json, tmp_dir):
+    def __init__(self, dart_command, workflow_json, tmp_dir, job_params_file):
         self.dart_command = dart_command
         self.workflow_json = workflow_json
         self.tmp_dir = tmp_dir
+        self.job_params_file = job_params_file
 
     def run(self, refid, ao_uri, begin_date, end_date, rights_ids, files):
         """Uses DART Runner to create a bag.
@@ -63,11 +64,7 @@ class BagCreator:
 
     def create_dart_job(self):
         """Runs a DART job."""
-        job_json_input = (json.dumps(self.job_params) + "\n").encode()
-        cmd = f"{self.dart_command} --workflow={self.workflow_json} --output-dir={self.tmp_dir}"
-        child = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, close_fds=True)
-        stdout_data, stderr_data = child.communicate(job_json_input)
-        if child.returncode != 0:
-            stdout_message = stdout_data.decode('utf-8') if stdout_data else ""
-            stderr_message = stderr_data.decode('utf-8') if stderr_data else ""
-            raise Exception(stdout_message, stderr_message)
+        with open(self.job_params_file, "w") as param_file:
+            json.dump(self.job_params, param_file)
+        cmd = f"{self.dart_command} --workflow={self.workflow_json} --output-dir={self.tmp_dir} < {self.job_params_file}"
+        subprocess.run(cmd, shell=True, check=True)
