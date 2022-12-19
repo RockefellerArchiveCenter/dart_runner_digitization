@@ -47,6 +47,8 @@ class DigitizationPipeline:
     def run(self, rights_ids):
         logging.info("Starting run...")
         self.processed_list = self.get_processed_list()
+        logging.info(
+            f"Found {len(self.processed_list)} directories to process.")
         refids = [
             d.name for d in Path(
                 self.root_dir).iterdir() if Path(
@@ -77,6 +79,7 @@ class DigitizationPipeline:
                     f"Directory {dir_to_bag} successfully removed")
             except Exception as e:
                 logging.error(f"Error for ref_id {refid}: {e}")
+        logging.info("Run complete!")
 
     def add_files_to_dir(self, refid, dir_to_bag):
         master_tiffs = copy_tiff_files(
