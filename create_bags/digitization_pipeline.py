@@ -47,14 +47,14 @@ class DigitizationPipeline:
     def run(self, rights_ids):
         logging.info("Starting run...")
         self.processed_list = self.get_processed_list()
-        logging.info(
-            f"Found {len(self.processed_list)} directories to process.")
         refids = [
             d.name for d in Path(
                 self.root_dir).iterdir() if Path(
                 self.root_dir,
                 d).iterdir() and len(
                 d.name) == 32 and d.name not in self.processed_list]
+        logging.info(
+            f"Found {len(refids)} directories to process.")
         for refid in refids:
             try:
                 ao_uri = self.as_client.get_uri_from_refid(refid)
