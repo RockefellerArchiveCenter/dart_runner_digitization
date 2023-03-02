@@ -31,7 +31,7 @@ class BagCreator:
             self.create_dart_job()
             return self.refid
         except Exception as e:
-            raise(e)
+            raise e
 
     def construct_job_params(self, rights_ids, files, begin_date, end_date):
         """Formats information for DART job parameters.
