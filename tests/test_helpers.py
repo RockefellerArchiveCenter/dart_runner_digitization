@@ -24,7 +24,7 @@ def ao_data():
     path_to_file = join("tests", "data", "ao_data.json")
     with open(path_to_file, "r") as read_file:
         data = json.load(read_file)
-    return(data)
+    return data
 
 
 @pytest.fixture
@@ -32,4 +32,4 @@ def ao_date_data():
     path_to_file = join("tests", "data", "ao_date_data.json")
     with open(path_to_file, "r") as read_file:
         data = json.load(read_file)
-    return(data)
+    return data
