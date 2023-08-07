@@ -42,7 +42,7 @@ This pipeline expects to be pointed at a directory containing subdirectories (na
             abcde_002.tif
             abcde_003.tif
         /service_edited
-            abcde.tif
+            abcde.pdf
     /refid2
         /master
             edcba_001.tif
@@ -53,7 +53,7 @@ This pipeline expects to be pointed at a directory containing subdirectories (na
             edcba_002.tif
             edcba_003.tif
         /service_edited
-            edcba.tif
+            edcba.pdf
 ```
 
 
