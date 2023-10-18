@@ -56,6 +56,9 @@ This pipeline expects to be pointed at a directory containing subdirectories (na
             edcba.pdf
 ```
 
+## Logging
+
+The pipeline will log to a file named `bag_creator.log` located in the same directory as the `dart_pipeline.py` script. Level and format can be configured by altering the settings in the `__init__` method of the `DigitizationPipeline` class.
 
 ## Tests
 
