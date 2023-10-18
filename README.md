@@ -1,6 +1,6 @@
 # DART for Digitized Content
 
-Uses [DART Runner](https://github.com/APTrust/dart-runner) to create bags of digitized content and upload PDF files to an S3 bucket.
+Uses [DART Runner](https://github.com/APTrust/dart-runner) to create bags of digitized content and upload them to an S3 bucket.
 
 
 ## Requirements
