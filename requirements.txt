@@ -10,22 +10,22 @@ attrs==23.2.0
     # via archivessnake
 boltons==24.0.0
     # via archivessnake
-boto3==1.34.136
+boto3==1.34.151
     # via
     #   -r requirements.in
     #   moto
-botocore==1.34.136
+botocore==1.34.151
     # via
     #   boto3
     #   moto
     #   s3transfer
-certifi==2024.6.2
+certifi==2024.7.4
     # via requests
 cffi==1.16.0
     # via cryptography
 charset-normalizer==3.3.2
     # via requests
-cryptography==42.0.8
+cryptography==43.0.0
     # via moto
 idna==3.7
     # via requests
@@ -55,7 +55,7 @@ pyyaml==6.0.1
     # via
     #   archivessnake
     #   responses
-rapidfuzz==3.9.3
+rapidfuzz==3.9.5
     # via archivessnake
 requests==2.32.3
     # via
@@ -70,7 +70,7 @@ shortuuid==1.0.13
     # via -r requirements.in
 six==1.16.0
     # via python-dateutil
-structlog==24.2.0
+structlog==24.4.0
     # via archivessnake
 urllib3==2.2.2
     # via
