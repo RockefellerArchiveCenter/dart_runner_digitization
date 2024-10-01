@@ -10,24 +10,24 @@ attrs==24.2.0
     # via archivessnake
 boltons==24.0.0
     # via archivessnake
-boto3==1.35.10
+boto3==1.35.29
     # via
     #   -r requirements.in
     #   moto
-botocore==1.35.10
+botocore==1.35.29
     # via
     #   boto3
     #   moto
     #   s3transfer
 certifi==2024.8.30
     # via requests
-cffi==1.17.0
+cffi==1.17.1
     # via cryptography
 charset-normalizer==3.3.2
     # via requests
-cryptography==43.0.0
+cryptography==43.0.1
     # via moto
-idna==3.8
+idna==3.10
     # via requests
 jinja2==3.1.4
     # via moto
@@ -39,7 +39,7 @@ markupsafe==2.1.5
     # via
     #   jinja2
     #   moto
-more-itertools==10.4.0
+more-itertools==10.5.0
     # via archivessnake
 moto==3.1.19
     # via -r requirements.in
@@ -49,13 +49,13 @@ python-dateutil==2.9.0.post0
     # via
     #   botocore
     #   moto
-pytz==2024.1
+pytz==2024.2
     # via moto
 pyyaml==6.0.2
     # via
     #   archivessnake
     #   responses
-rapidfuzz==3.9.6
+rapidfuzz==3.10.0
     # via archivessnake
 requests==2.32.3
     # via
@@ -72,7 +72,7 @@ six==1.16.0
     # via python-dateutil
 structlog==24.4.0
     # via archivessnake
-urllib3==2.2.2
+urllib3==2.2.3
     # via
     #   botocore
     #   requests
