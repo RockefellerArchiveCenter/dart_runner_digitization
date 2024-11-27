@@ -4,8 +4,8 @@ repos:
     hooks:
     -   id: flake8
         args: [--ignore=E501]
--   repo: https://github.com/pre-commit/mirrors-autopep8
-    rev: v2.0.4
+-   repo: https://github.com/hhatto/autopep8
+    rev: v2.3.1
     hooks:
     -   id: autopep8
         args: [--exit-code, --aggressive, --in-place, -r]
