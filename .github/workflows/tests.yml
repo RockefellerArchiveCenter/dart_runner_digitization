@@ -26,6 +26,9 @@ jobs:
       - name: Install tox
         run: pip install tox
 
+      - name: Copy config file
+        run: cp local_settings.cfg.example local_settings.cfg
+
       - name: Run tox
         env:
           TOXENV: ${{ matrix.toxenv }}
