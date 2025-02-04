@@ -8,19 +8,15 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.10"]
-        toxenv: [py310, linting]
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: 3.10
           cache: 'pip'
 
       - name: Install tox
@@ -30,6 +26,4 @@ jobs:
         run: cp local_settings.cfg.example local_settings.cfg
 
       - name: Run tox
-        env:
-          TOXENV: ${{ matrix.toxenv }}
         run: tox
