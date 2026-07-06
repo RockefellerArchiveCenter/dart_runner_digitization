@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.1](https://github.com/RockefellerArchiveCenter/dart_runner_digitization/compare/v1.0.0...v1.0.1) (2026-07-06)
+
+
+### Bug Fixes
+
+* **deps:** Scheduled dependency updates ([c2c0f30](https://github.com/RockefellerArchiveCenter/dart_runner_digitization/commit/c2c0f3075b38613a172b7a8588e31e7fbdc5933c))
+* **deps:** Scheduled dependency updates ([9ea3f08](https://github.com/RockefellerArchiveCenter/dart_runner_digitization/commit/9ea3f083360b1bd0ee95225c2a001e79eb716a74))
+* **deps:** Scheduled dependency updates ([7298422](https://github.com/RockefellerArchiveCenter/dart_runner_digitization/commit/7298422d8faccd0a5c1349ee427a93ea1f1da591))
+* **deps:** Scheduled dependeny updates ([9ea3f08](https://github.com/RockefellerArchiveCenter/dart_runner_digitization/commit/9ea3f083360b1bd0ee95225c2a001e79eb716a74))
+
 ## 1.0.0 (2026-06-18)
 
 
